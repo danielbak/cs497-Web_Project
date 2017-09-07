@@ -38,5 +38,5 @@ Another long term goal will be to add some filtering on
 the scope where the search will be performed 
 to be limited to some specific documents.
 
-Category Requirements
+Category Requirements:
 The project's cathegory is a website.
