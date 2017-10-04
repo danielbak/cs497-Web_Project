@@ -1,0 +1,19 @@
+{
+  "name": "cs497WebProject",
+  "homepage": "https://github.com/danielbak/cs497-Web_Project",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
