@@ -27,7 +27,7 @@ class MainController extends Controller
 		    );
     }
     /**
-     * @Route("/register", name="register")
+     * @Route("/registering", name="register")
      */
     public function registerAction()
     {
