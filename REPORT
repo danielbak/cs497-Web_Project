@@ -1,6 +1,14 @@
+October 04
 For this first version I was able to finish the front end design as planned.
 I used the synfony framework for the back end along with the bootstrap framework for the front-end design.
 I also use the composer tool to bundle the different tools and technology that I might need in the future. 
 So far I use composer to install synfony and bootstrap.
 I have created a home page, login page and register page.
 The next step will be to deploy what I have so far on Heroku and creating a login feature.
+
+October 23
+For this second version I have worked on the setting up the FOSUserBundle in the symfony app. 
+This bundle will help with user registration, login and user account as well as profile for the app.
+I am still working on tweaking and customizing the bundle for the purpose of that app. 
+The work ahead will consist in finishing the customization portion and moving on to picking 
+a different bundle to manage the documents that will be uploaded.
