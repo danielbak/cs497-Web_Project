@@ -11,28 +11,11 @@ class MainController extends Controller
     /**
      * @Route("/", name="home")
      */
-    public function numberAction()
+    public function homeAction()
     {
 
 	    return $this->render('index.html.twig'
 		    );
     }
-    /**
-     * @Route("/signin", name="signin")
-     */
-    public function signinAction()
-    {
-
-	    return $this->render('signin.html.twig'
-		    );
-    }
-    /**
-     * @Route("/registering", name="register")
-     */
-    public function registerAction()
-    {
-
-	    return $this->render('register.html.twig'
-		    );
-    }
+    
 }

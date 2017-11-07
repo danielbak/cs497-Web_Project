@@ -1,3 +1,5 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block fos_user_content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,10 +25,10 @@
               <a class="nav-link active" href="{{ path('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ path('signin') }}">Sign In</a>
+              <a class="nav-link" href="{{ path('fos_user_security_login') }}">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ path('register') }}">Register</a>
+              <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Register</a>
             </li>
           </ul>
         </nav>
@@ -36,7 +38,7 @@
       <div class="jumbotron">
         <h1 class="display-3">Welcome to LookIt</h1>
         <p class="lead">LookIt is a search engine that allows users to search through their document for information that are important to them. It allows members to have access to a space that they can use to store their documents and later look for a particular information in those documents.</p>
-        <p><a class="btn btn-lg btn-success" href="{{ path('register') }}" role="button">Sign up today</a></p>
+        <p><a class="btn btn-lg btn-success" href="{{ path('fos_user_registration_register') }}" role="button">Sign up today</a></p>
       </div>
 
       <div class="row marketing">
@@ -70,3 +72,4 @@
     <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+{% endblock fos_user_content %}
