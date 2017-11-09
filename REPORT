@@ -12,3 +12,9 @@ This bundle will help with user registration, login and user account as well as 
 I am still working on tweaking and customizing the bundle for the purpose of that app. 
 The work ahead will consist in finishing the customization portion and moving on to picking 
 a different bundle to manage the documents that will be uploaded.
+
+November 08
+I worked on customizing the FOSUserBundle and installing the zend framework 
+containing the lucene search API adapted for php. For the next step 
+I need to work on having a module that can help manage documents 
+and defining how the search will be done.
