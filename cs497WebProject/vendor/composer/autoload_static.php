@@ -19,11 +19,6 @@ class ComposerStaticInit0434178003831ddaac40fef084ae774c
     );
 
     public static $prefixLengthsPsr4 = array (
-        'Z' => 
-        array (
-            'Zend\\Stdlib\\' => 12,
-            'Zend\\Hydrator\\' => 14,
-        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -63,7 +58,6 @@ class ComposerStaticInit0434178003831ddaac40fef084ae774c
         ),
         'I' => 
         array (
-            'Ivory\\LuceneSearchBundle\\' => 25,
             'Incenteev\\ParameterHandler\\' => 27,
         ),
         'F' => 
@@ -91,14 +85,6 @@ class ComposerStaticInit0434178003831ddaac40fef084ae774c
     );
 
     public static $prefixDirsPsr4 = array (
-        'Zend\\Stdlib\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
-        ),
-        'Zend\\Hydrator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-hydrator/src',
-        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -199,10 +185,6 @@ class ComposerStaticInit0434178003831ddaac40fef084ae774c
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Ivory\\LuceneSearchBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/egeloen/lucene-search-bundle',
-        ),
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
@@ -250,13 +232,6 @@ class ComposerStaticInit0434178003831ddaac40fef084ae774c
     );
 
     public static $prefixesPsr0 = array (
-        'Z' => 
-        array (
-            'ZendSearch' => 
-            array (
-                0 => __DIR__ . '/..' . '/zendframework/zendsearch/library',
-            ),
-        ),
         'T' => 
         array (
             'Twig_' => 
