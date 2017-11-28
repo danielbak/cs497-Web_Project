@@ -1,0 +1,9 @@
+ongr_elasticsearch:
+    managers:
+        default:
+            index:
+                index_name: job_name
+                hosts:
+                    - https://elastic:caLjbhalN2XBCIcIL6SdZyko@29b986c546a2ecd07c6e93f6a9d00091.us-east-1.aws.found.io:9243
+            mappings:
+                - AppBundle

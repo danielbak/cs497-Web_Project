@@ -1,3 +1,11 @@
+
+<link rel="stylesheet"
+	href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+<link rel="stylesheet"
+	href="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.js') }}">
+<link rel="stylesheet"
+	href="{{ asset('assets/vendor/bootstrap/dist/css/narrow-jumbotron.css') }}">
+
 <script src="{{ asset('assets/vendor/dropzone/dist/dropzone.js') }}"></script>
 <link rel="stylesheet" href="{{ asset('assets/vendor/dropzone/dist/dropzone.css') }}" />
 
@@ -13,10 +21,116 @@ Dropzone.autoDiscover = false;
 var myDropzone = new Dropzone("#form_snippet_image", { url: _actionToDropZone });
 
 myDropzone.on("addedfile", function(file) {
-            alert('nouveau fichier reçu');
+            alert('new file received');
         });
 
 </script>
 
 
+</div>
+
+<div class=".col-6 .col-lg-4" style="margin:20px;" >
+<div style="width:400px; position:absolute; left: 10px;">
+<fieldset style="">
+    <legend>All Files: ({% if Allfiles %} {{ Allfiles['hits']['total'] }} {% endif %})</legend>
+<h1><a href='{{path('logged')}}'>Refresh </a></h1>
+
+<ul style="height:400px; overflow: auto;">
+    {% for result in Allfiles['hits']['hits'] %}
+        <form action='{{path('logged')}}' > <input hidden='true' type='text' name=ok id=ok value={{ result['_source']['file']['url'] }}>{{ result['_source']['file']['filename'] }} <input type='submit' name=o id=o value='delete'></input></li></form>
+    {% endfor %}
+</ul>
+
+</fieldset>
+</div>
+
+
+
+<div class=".col-12 .col-sm-6 .col-lg-8">
+<fieldset style="width:800px; position:absolute; right: 10px; height:800px">
+    <legend>Searching Area:</legend>
+
+
+<form action='{{path('logged')}}'  align="center" style="margin: 20px; "> 
+
+<h1> Search </h1>
+
+<input type='text' name='q' id='q'>
+</br>
+<div class="container">
+ <div class="row">
+<div class=".col-4">
+<fieldset style="color:green; ">
+    <legend>Common Terms Query:</legend>
+
+<label> cutoff_frequency </label><input style="width:40px;" type='text' name='cutoff_frequency' id='cutoff_frequency'>
+</br>
+<label> low_freq </label><input style="width:40px;" type='text' name='low_freq' id='low_freq'>
+</br>
+<label> high_freq </label><input style="width:40px;" type='text' name='high_freq' id='high_freq'>
+ </input> <input type='submit' name='commonTermsQuery' id='commonTermsQuery' value='commonTermsQuery'></input>
+
+</fieldset>
+</div>
+
+<div class=".col-4">
+<fieldset style="color:green; ">
+    <legend>Simple Query:</legend>
+
+<label> default_operator </label><input style="width:40px;" type='text' name='default_operator' id='default_operator'>
+
+ </input> <input type='submit' name='simpleQueryStringQuery' id='simpleQueryStringQuery' value='simpleQueryStringQuery'></input>
+
+</fieldset>
+</div>
+
+
+</div>
+</div>
+
+</form>
+
+
+<fieldset class="container" color:blue; margin: 20px; position:relative; top: 150px;">
+    <legend style="color:blue;">Search Results: ({% if Queriedfiles %} {{ Queriedfiles['hits']['total'] }} {% endif %})</legend>
+<div class="row">
+  <div class="col-3">
+    <div class="list-group" id="list-tab" role="tablist">
+
+  {% if Queriedfiles %}
+    {% for result in Queriedfiles['hits']['hits'] %}
+       <a class="list-group-item list-group-item-action active" id="{{ result['_source']['file']['filename']}}-list" data-toggle="list" href="#{{ result['_source']['file']['filename']}}" role="tab" aria-controls="home">{{ result['_source']['file']['filename']}} </a><ul><li>Score: {{result['_score']}}</li> </ul> 
+    {% endfor %}
+
+{% endif %}
+</div>
+
+</div>
+
+  <div class="col-4">
+    <div class="tab-content" id="nav-tabContent">
+
+{% if Queriedfiles %}
+    {% for result in Queriedfiles['hits']['hits'] %}
+      <div class="tab-pane fade show active" id="{{ result['_source']['file']['filename']}}" role="tabpanel" aria-labelledby="{{ result['_source']['file']['filename']}}-list">{{ result['_source']['content']}}</div>
+
+{% endfor %}
+
+{% endif %}
+</div>
+</div>
+</div>
+
+<script>
+$('#list-tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+</fieldset>
+
+
+</fieldset>
+</div>
 </div>

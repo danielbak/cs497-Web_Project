@@ -65,8 +65,8 @@ unlink($_GET['ok']);
 
             //require 'vendor/autoload.php'; //Composer autoload
 $hosts = [
-	//'https://elastic:caLjbhalN2XBCIcIL6SdZyko@29b986c546a2ecd07c6e93f6a9d00091.us-east-1.aws.found.io:9243'
-	'localhost:9200'
+	'https://elastic:caLjbhalN2XBCIcIL6SdZyko@29b986c546a2ecd07c6e93f6a9d00091.us-east-1.aws.found.io:9243'
+	//'localhost:9200'
 
 ];  
 
@@ -80,7 +80,7 @@ $hosts = [
   $search->addQuery($matchAll);
   
   $params = [
-    'index' => 'job_local',
+    'index' => 'job_name',
     'type' => 'doc',
     'body' => $search->toArray(),
   ];
@@ -122,7 +122,7 @@ $searchQuery = new Search();
   $searchQuery->addQuery($commonTermsQuery);
   
   $paramsQuery = [
-    'index' => 'job_local',
+    'index' => 'job_name',
     'type' => 'doc',
     'body' => $searchQuery->toArray(),
   ];
@@ -154,7 +154,7 @@ $searchQuery = new Search();
 $searchQuery->addQuery($simpleQueryStringQuery);
   
   $paramsQuery = [
-    'index' => 'job_local',
+    'index' => 'job_name',
     'type' => 'doc',
     'body' => $searchQuery->toArray(),
   ];
@@ -183,8 +183,8 @@ $Queriedfiles = $client->search($paramsQuery);
 
             //require 'vendor/autoload.php'; //Composer autoload
 $hosts = [
-	//'https://elastic:caLjbhalN2XBCIcIL6SdZyko@29b986c546a2ecd07c6e93f6a9d00091.us-east-1.aws.found.io:9243'
-	'localhost:9200'
+	'https://elastic:caLjbhalN2XBCIcIL6SdZyko@29b986c546a2ecd07c6e93f6a9d00091.us-east-1.aws.found.io:9243'
+	//'localhost:9200'
 
 ];  
 
@@ -198,7 +198,7 @@ $hosts = [
   $search->addQuery($matchAll);
   
   $params = [
-    'index' => 'job_local',
+    'index' => 'job_name',
     'type' => 'doc',
     'body' => $search->toArray(),
   ];

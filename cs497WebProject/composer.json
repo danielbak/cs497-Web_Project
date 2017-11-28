@@ -15,10 +15,14 @@
     },
     "require": {
         "php": "^5.6",
+        "bnbc/upload-bundle": "dev-master",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",
+        "jms/serializer-bundle": "^2.2",
+        "ongr/elasticsearch-bundle": "~5.0",
+        "ongr/elasticsearch-dsl": "^5.0",
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^3.0.2",
         "symfony/monolog-bundle": "^3.1.0",
@@ -27,8 +31,7 @@
         "symfony/symfony": "3.3.*",
         "symfony/web-server-bundle": "^3.3",
         "twbs/bootstrap": "dev-master",
-        "twig/twig": "^1.0||^2.0",
-	"bnbc/upload-bundle": "dev-master"
+        "twig/twig": "^1.0||^2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

@@ -98,7 +98,7 @@ class Document
      */
     public function preUpload()
     {
-        // la propriété « file » peut être vide si le champ n'est pas requis
+        // the property « file » could be empty
         if (null === $this->file) {
             return;
         }
@@ -114,15 +114,14 @@ class Document
      */
     public function upload()
     {
-        // la propriété « file » peut être vide si le champ n'est pas requis
+        // the property « file » could be empty
         if (null === $this->file) {
             return;
         }
 
         $file_name = $this->file->getClientOriginalName();
 
-        // la méthode « move » prend comme arguments le répertoire cible et
-        // le nom de fichier cible où le fichier doit être déplacé
+        // the method « move » take the target file and folder as arguments.
         if (!file_exists($this->getUploadRootDir())) {
             mkdir($this->getUploadRootDir(), 0775, true);
         }
